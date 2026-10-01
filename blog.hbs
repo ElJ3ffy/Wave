@@ -4,7 +4,9 @@
     <main class="site-main container medium">
         <div class="post-feed">
             {{#foreach posts}}
-                {{> "loop"}}
+                {{#unless featured}}
+                    {{> "loop"}}
+                {{/unless}}
             {{/foreach}}
         </div>
     </main>
