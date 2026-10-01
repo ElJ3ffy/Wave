@@ -5,7 +5,9 @@
 
     <div class="post-feed gh-feed">
         {{#foreach posts}}
-            {{> "loop"}}
+            {{#unless featured}}
+                {{> "loop"}}
+            {{/unless}}
         {{/foreach}}
     </div>
 
